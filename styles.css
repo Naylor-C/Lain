@@ -4,7 +4,7 @@ background-color: black;
 }
 
 
-. {
+.I {
   display: flex;
   flex-direction: row;
   background-color: white;
