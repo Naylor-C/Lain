@@ -3,15 +3,8 @@ body
 background-color: black;
 }
 
-.Main { 
-  width: 400;
-  height: 400;
-  background-color: #A020F0;
-  border-bottom: solid 1px white;
-  border-radius: 30%;
-}
 
-.Main button {
+. {
   display: flex;
   flex-direction: row;
   background-color: white;
