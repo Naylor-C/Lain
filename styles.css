@@ -5,11 +5,10 @@ background-color: black;
 
 
 .I {
-  width: 20px;
-  height: 20px
+  width: 20%;
+  height: 20%;
   display: flex;
   flex-direction: row;
-  background-color: white;
   border-radius: 30%;
 }
 
