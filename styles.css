@@ -2,7 +2,7 @@ body {
 background-color: black;
 }
 
-.I {
+.I a {
   display: flex;
   flex-direction: row;
 }
