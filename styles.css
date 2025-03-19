@@ -5,11 +5,12 @@ background-color: black;
 
 
 .I {
-  width: 20%;
-  height: 20%;
   display: flex;
   flex-direction: row;
-  border-radius: 30%;
+}
+
+.I link-Discord {
+  
 }
 
 .hacker-screen {
