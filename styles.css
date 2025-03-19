@@ -1,17 +1,25 @@
-body
-{
+body {
 background-color: black;
 }
-
 
 .I {
   display: flex;
   flex-direction: row;
 }
 
+
 .I link-Discord {
   
 }
+
+.I link-Telegram {
+  
+}
+
+.I link-Whatsapp {
+  
+}
+
 
 .hacker-screen {
   width: 80%;
