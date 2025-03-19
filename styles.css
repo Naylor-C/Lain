@@ -26,4 +26,39 @@ background-color: black;
   animation: binary-animation 1.5s infinite linear;
 }
 
+@keyframes binary-animation {
+  0% {
+    content: "1";
+  }
+  10% {
+    content: "0";
+  }
+  20% {
+    content: "1";
+  }
+  30% {
+    content: "0";
+  }
+  40% {
+    content: "1";
+  }
+  50% {
+    content: "0";
+  }
+  60% {
+    content: "1";
+  }
+  70% {
+    content: "0";
+  }
+  80% {
+    content: "1";
+  }
+  90% {
+    content: "0";
+  }
+  100% {
+    content: "1";
+  }
+}
 
