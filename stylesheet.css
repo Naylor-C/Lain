@@ -32,7 +32,7 @@
         }
         /* Restante do CSS (igual ao anterior) */
         header {
-            background-color: #111;
+            background-image: url("./src/struct/LainUp.jpeg");
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #00ff00;
