@@ -1,3 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Lain</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        /* Efeito de números binários no fundo */
+        #binary-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        .binary {
+            position: absolute;
+            color: #00ff00;
+            font-size: 14px;
+            user-select: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+        /* Restante do CSS (igual ao anterior) */
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #00ff00;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            padding: 10px;
+        }
+        nav a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border: 1px solid #00ff00;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            border-top: 1px solid #00ff00;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fundo com números binários -->
+    <div id="binary-background"></div>
+
+    <!-- Conteúdo do site (igual ao anterior) -->
+    <header>
+        <h1>LAIN IWAKURA</h1>
+        <p>"Present day, present time..."</p>
+    </header>
+    <nav>
+        <a href="#about">Sobre</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#links">Links</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>Quem é Lain?</h2>
+            <p>Lain Iwakura é a protagonista do anime <em>Serial Experiments Lain</em> (1998), uma obra que explora temas como identidade, realidade virtual e a conexão entre o mundo físico e o digital (a "Wired"). Lain começa como uma garota tímida, mas sua vida muda quando descobre segredos perturbadores sobre a rede e sua própria existência.</p>
+        </section>
+        <section id="gallery">
+            <h2>Galeria de Imagens</h2>
+            <div class="gallery">
+                <img src="https://i.imgur.com/JxQZQ9i.jpg" alt="Lain Iwakura 1">
+                <img src="https://i.imgur.com/9Q9QZ9i.jpg" alt="Lain Iwakura 2">
+                <img src="https://i.imgur.com/8Q8QZ9i.jpg" alt="Lain Iwakura 3">
+                <img src="https://i.imgur.com/7Q7QZ9i.jpg" alt="Lain Iwakura 4">
+                <img src="https://i.imgur.com/6Q6QZ9i.jpg" alt="Lain Iwakura 5">
+                <img src="https://i.imgur.com/5Q5QZ9i.jpg" alt="Lain Iwakura 6">
+            </div>
+        </section>
+        <section id="links">
+            <h2>Links Relacionados</h2>
+            <ul>
+                <li><a href="https://myanimelist.net/anime/339/Serial_Experiments_Lain" target="_blank">MyAnimeList</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Serial_Experiments_Lain" target="_blank">Wikipedia</a></li>
+                <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Opening (Duvet)</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>© 2023 - Site não oficial de Serial Experiments Lain | "Let's all love Lain."</p>
+    </footer>
+
+    <!-- Script para gerar números binários -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const binaryBackground = document.getElementById('binary-background');
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            
+            // Cria colunas de números binários
+            for (let i = 0; i < 50; i++) {
+                const column = document.createElement('div');
+                column.style.position = 'absolute';
+                column.style.left = `${Math.random() * width}px`;
+                column.style.top = `-${Math.random() * height}px`;
+                
+                // Gera números binários (0 ou 1) em cada coluna
+                for (let j = 0; j < 20; j++) {
+                    const binary = document.createElement('div');
+                    binary.className = 'binary';
+                    binary.textContent = Math.random() > 0.5 ? '1' : '0';
+                    binary.style.animationDuration = `${5 + Math.random() * 10}s`;
+                    binary.style.animationDelay = `${Math.random() * 5}s`;
+                    column.appendChild(binary);
+                }
+                
+                binaryBackground.appendChild(column);
+            }
+        });
+    </script>
+</body>
+</html>
+
 <html>
 <head>
     <title>Project Lain</title>
